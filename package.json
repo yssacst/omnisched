@@ -1,0 +1,57 @@
+{
+  "name": "omnisched",
+  "version": "1.0.0",
+  "description": "High-performance scheduling API designed for high-concurrency environments. Implements Clean Architecture, Schema-based multi-tenancy, and resilient background workers for WhatsApp/Email alerts.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "db:seed": "prisma db seed",
+    "dev": "tsx watch src/main/server.ts",
+    "test": "vitest run",
+    "lint": "eslint src/**/*.ts --fix"
+  },
+  "prisma": {
+    "seed": "tsx src/infra/database/prisma/seed.ts"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=22.17.1",
+    "npm": ">=10.0.0"
+  },
+  "author": "Rayssa P Costa",
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^10.3.0",
+    "@types/node": "^25.2.1",
+    "@vitest/ui": "^4.0.18",
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "pino-pretty": "^13.1.3",
+    "prettier": "^3.8.1",
+    "prisma": "^6.19.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.2",
+    "dotenv": "^17.2.4",
+    "fastify": "^5.7.4",
+    "fastify-metrics": "^12.1.0",
+    "fastify-type-provider-zod": "^6.1.0",
+    "pino": "^10.3.0",
+    "zod": "^4.3.6"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yssacst/omnisched.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yssacst/omnisched/issues"
+  },
+  "homepage": "https://github.com/yssacst/omnisched#readme"
+}
