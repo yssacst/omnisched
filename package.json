@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "db:seed": "prisma db seed",
-    "dev": "tsx watch src/main/server.ts",
+    "dev": "tsx watch --env-file=.env src/main/server.ts",
     "test": "vitest run",
     "lint": "eslint src/**/*.ts --fix"
   },
@@ -35,6 +35,8 @@
     "vitest": "^4.0.18"
   },
   "dependencies": {
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^5.2.5",
     "@prisma/client": "^6.19.2",
     "dotenv": "^17.2.4",
     "fastify": "^5.7.4",

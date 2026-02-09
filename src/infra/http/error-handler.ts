@@ -1,6 +1,6 @@
 import { type FastifyInstance, type FastifyError } from 'fastify'
 
-export function setupErrorHandler(app: FastifyInstance) {
+export function errorHandler(app: FastifyInstance) {
   app.setErrorHandler((error: FastifyError, request, reply) => {
     if (error.validation) {
       return reply.status(400).send({
