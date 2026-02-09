@@ -3,7 +3,7 @@ export
 
 DC=docker-compose
 
-.PHONY: setup up down logs migrate seed
+.PHONY: setup up down logs migrate seed dev start
 
 setup:
 	npm ci
@@ -26,6 +26,11 @@ migrate:
 
 seed:
 	npx prisma db seed
+
+dev:
+	npx tsx watch --env-file=.env src/main/server.ts
+
+start: up dev
 
 db-reset:
 	docker-compose down -v
