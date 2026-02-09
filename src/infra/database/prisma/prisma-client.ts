@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client'
 
 export const prisma = new PrismaClient({
-  log: ['query', 'error', 'info', 'warn'], // Isso vai mostrar o SQL no seu terminal
+  log: ['query', 'error', 'info', 'warn'], // to show SQL in terminal
 })

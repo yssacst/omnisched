@@ -2,7 +2,7 @@ import { type FastifyInstance } from 'fastify'
 import { prisma } from '../../database/prisma/prisma-client.js'
 
 export async function healthCheck(app: FastifyInstance) {
-  app.get('/health', async (request, reply) => {
+  app.get('/health', async (_, reply) => {
     try {
       await prisma.$queryRaw`SELECT 1`
 
